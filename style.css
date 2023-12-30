@@ -1,0 +1,12 @@
+.wcesb_delivery_date_shipping {
+    border: 1px solid #76ff76;
+    background: #76ff771f;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 350px;
+}
+
+.wcesb_date {
+    font-weight: 600;
+}
