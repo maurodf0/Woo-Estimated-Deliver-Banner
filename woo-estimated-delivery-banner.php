@@ -48,13 +48,14 @@ function wcesb_delivery_date_shipping() {
 	<div class="wcesb_delivery_date_shipping">Il prodotto sarà consegnato partire da <span class="wcesb_date"><?php echo date('l', $day) ?> <?php echo $datefinal; ?> </span></div>
 		
 	<?php } else if(date('w') == 7){
-				$datefinal = date('d-m-Y', strtotime($shipping_dates. 'days +2 days'));
+				$datefinal = date('d-m-Y', strtotime($shipping_dates. 'days +1 days'));
 				$day = strtotime($datefinal);  
 	echo 'Il prodotto sarà consegnato a partire dal ' . date('l', $day) . $datefinal;
 	} else{
-		$datefinal = date('d-m-Y', strtotime($shipping_dates. 'days +2 days'));
+		// the number added is less cause the_date not include the currently day of working.
+		$datefinal = date('d-m-Y', strtotime($shipping_dates. 'days -1 days'));	
 		$day = strtotime($datefinal);  
-	echo 'Il prodotto sarà a casa a partire dal ' . date('l', $day) .  $datefinal . '<br>';
+	echo 'Il prodotto sarà a casa a partire dal ' . date('l', $day) . ' ' . $datefinal . '<br>';
 	}
 	}
 
